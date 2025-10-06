@@ -28,6 +28,14 @@ export default function Navbar2() {
             ))
           }
         </div>
+        {/* Links */}
+        {/* <div className="flex space-x-6 text-gray-200 text-sm">
+          <Link href="/model"><span className="hover:text-white">Model</span></Link>
+          <Link href="/usercases"><span className="hover:text-white">Usercases</span></Link>
+          <Link href="#"><span className="hover:text-white">Neuroflows</span></Link>
+          <Link href="/about"><span className="hover:text-white">About</span></Link>
+          <Link href="#"><span className="hover:text-white">Sign Up</span></Link>
+        </div> */}
       </div>
     </nav>
   );

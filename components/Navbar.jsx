@@ -54,6 +54,12 @@ export default function Navbar() {
                   <Link key={`${item.name}-${index}`} href={item.href} className="hover:underline">{item.name}</Link>
                     ))
                   }
+                  
+                  {/* <Link href="/usercases" className="hover:underline">Usercases</Link>
+                  <Link href="#" className="hover:underline">Neuroflows</Link>
+                  <Link href="/about" className="hover:underline">About</Link>
+                  <Link href="#" className="hover:underline">Sign Up</Link> */}
+                  
                 </nav>
               </div>
             </div>

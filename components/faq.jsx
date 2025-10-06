@@ -56,7 +56,7 @@ export default function FAQ() {
 
             {/* Answer */}
             {openIndex === index && faq.answer && (
-              <p className="text-gray-400 text-sm pl-16 leading-relaxed">
+              <p className="text-gray-400 text-sm pl-12 md:pl-16 leading-relaxed">
                 {faq.answer}
               </p>
             )}
