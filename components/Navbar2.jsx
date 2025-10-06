@@ -23,8 +23,8 @@ export default function Navbar2() {
         {/* Links */}
         <div className="flex space-x-6 text-gray-200 text-sm">
           <Link href="#"><span className="hover:text-white">Model</span></Link>
-          <Link href="/usercases"><span className="hover:text-white">Usercase</span></Link>
-          <Link href="#"><span className="hover:text-white">Neuroflows</span></Link>
+          <Link href="#"><span className="hover:text-white">Kits</span></Link>
+          <Link href="#"><span className="hover:text-white">Studio</span></Link>
           <Link href="#"><span className="hover:text-white">About</span></Link>
           <Link href="#"><span className="hover:text-white">Sign Up</span></Link>
         </div>
