@@ -1,7 +1,8 @@
-import BestImageModels from "@/components/BestImageModels";
-import BestOpenModels from "@/components/BestOpenSource";
-import BestVideoModels from "@/components/BestVideoModels";
-import ModelsShowcaseHero from "@/components/ModelsHero";
+import BestImageModels from "@/components/model/BestImageModels";
+import BestOpenModels from "@/components/model/BestOpenSource";
+import BestVideoModels from "@/components/model/BestVideoModels";
+import ModelsShowcaseHero from "@/components/model/ModelsHero";
+
 
 export default function ModelsShowcase() {
 
@@ -10,13 +11,13 @@ export default function ModelsShowcase() {
     <ModelsShowcaseHero/>
       {/* Other Sections */}
       <section>
-        <BestImageModels />
+        <BestImageModels/>
       </section>
       <section>
-        <BestVideoModels />
+        <BestVideoModels/>
       </section>
       <section>
-        <BestOpenModels />
+        <BestOpenModels/>
       </section>
     </>
   );
