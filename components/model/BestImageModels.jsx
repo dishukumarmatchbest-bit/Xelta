@@ -37,7 +37,7 @@ export default function BestImageModels() {
         Best Image Generation Models
       </h2>
 
-      {/* Horizontal scroll container */}
+      {/* Horizontal scroll container*/}
       <div
         className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
       >
