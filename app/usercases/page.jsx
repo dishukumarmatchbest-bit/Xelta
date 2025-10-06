@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/footer";
-import VideoGeneratorModel from "@/components/usercases/video-generator-model";
-import OpenSourceModel from "@/components/usercases/open-source-model";
+import BestVideoModels from "@/components/BestVideoModels";
+import BestOpenSource from "@/components/BestOpenSource";
+
 
 function Carousel() {
   const cards = [
@@ -150,10 +150,10 @@ export default function UsercasesPage() {
         </section>
 
         <div className="space-y-6">
-          <VideoGeneratorModel />
-          <OpenSourceModel />
+          <BestVideoModels/>
+          <BestOpenSource />
         </div>
-        <Footer/>
+    
 
         <style jsx>{`
           .usercases-page {
