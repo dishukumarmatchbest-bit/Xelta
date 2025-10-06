@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Plus, X } from "lucide-react"; // for icons (install: npm i lucide-react)
+import { Plus, X } from "lucide-react"; 
 
 const faqs = [
   {

@@ -17,8 +17,10 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -36,15 +38,15 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
                 {/* Logo */}
-                <div className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-2">
                   <Image src="/logo/logo1.png" width={18} height={18} alt="logo" />
                   <span className="mb-2 font-extrabold text-white h-[16px]">Xelta</span>
-                </div>
+                </Link>
 
                 <nav className="space-x-8 hidden sm:flex text-white text-[14px]">
-                  <Link href="#" className="hover:underline">Model</Link>
-                  <Link href="#" className="hover:underline">Kits</Link>
-                  <Link href="#" className="hover:underline">Studio</Link>
+                  <Link href="/model" className="hover:underline">Model</Link>
+                  <Link href="#" className="hover:underline">Uppercases</Link>
+                  <Link href="#" className="hover:underline">Neuroflows</Link>
                   <Link href="#" className="hover:underline">About</Link>
                   <Link href="#" className="hover:underline">Sign Up</Link>
                 </nav>
