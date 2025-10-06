@@ -4,37 +4,37 @@ import { ArrowUpRight, Clock } from "lucide-react";
 
 const cards = [
   {
-    img: "/bestImageModel/Rectangle 966.png",
+    img: "/bestImageModel/Rectangle 963.png",
     title: "Kling 2.5 Turbo",
     desc: "Creates cinematic videos from text and images.",
   },
   {
-    img: "/bestImageModel/Rectangle 967.png",
+    img: "/bestImageModel/Rectangle 964.png",
     title: "Kling 2.5 Turbo",
     desc: "Creates cinematic videos from text and images.",
   },
   {
-    img: "/bestImageModel/Rectangle 968.png",
+    img: "/bestImageModel/Rectangle 965.png",
     title: "Kling 2.5 Turbo",
     desc: "Creates cinematic videos from text and images.",
   },
   {
-    img: "/bestImageModel/Rectangle 966.png",
+    img: "/bestImageModel/Rectangle 963.png",
     title: "Kling 2.5 Turbo",
     desc: "Creates cinematic videos from text and images.",
   },
   {
-    img: "/bestImageModel/Rectangle 967.png",
+    img: "/bestImageModel/Rectangle 964.png",
     title: "Kling 2.5 Turbo",
     desc: "Creates cinematic videos from text and images.",
   },
 ];
 
-export default function BestOpenModels() {
+export default function BestVideoModels() {
   return (
     <section className="bg-[#090F0A] text-white py-20 px-6 md:px-16">
       <h2 className="text-2xl md:text-[32px] font-[600] mb-10 leading-normal">
-        Best Open Source Models
+        Best Video Generation Models
       </h2>
 
       {/* Horizontal scroll container */}
@@ -42,7 +42,7 @@ export default function BestOpenModels() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="relative flex-shrink-0 w-[362px] h-[478px] rounded-[24px] overflow-hidden 
+            className="relative flex-shrink-0 w-[332px] h-[428px] rounded-[25px] overflow-hidden 
             bg-gradient-to-br from-white/10 to-white/5 
             border border-white/10 backdrop-blur-xl
             shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
@@ -51,7 +51,7 @@ export default function BestOpenModels() {
             snap-center"
           >
             {/* Image */}
-            <div className="relative w-[362px] h-[478px] rounded-[24px] overflow-hidden">
+            <div className="relative w-[332px] h-[428px] rounded-[25px] overflow-hidden">
               <Image
                 src={card.img}
                 alt={card.title}
@@ -81,16 +81,16 @@ export default function BestOpenModels() {
 
             {/* --- UPDATED BLUR BOTTOM CONTAINER --- */}
             <div
-              className="absolute bottom-0 left-0 right-0 m-4 px-4 py-5
+              className="absolute bottom-0 left-0 right-0 m-2 mb-4 px-4 py-2
               bg-gradient-to-t from-[#000000]/60 via-[#000000]/30 to-transparent 
               backdrop-blur-[8px] rounded-2xl border border-white/20"
             >
               <h3 className="text-lg font-semibold mb-1">{card.title}</h3>
-              <p className="text-sm text-gray-300 mb-4">{card.desc}</p>
+              <p className="text-[13px] text-gray-300 mb-4">{card.desc}</p>
 
               <div className="flex items-center gap-3">
                 <button
-                  className="flex items-center gap-2 text-sm text-white px-3 py-1.5
+                  className="flex items-center gap-2 text-[12px] text-white px-3 py-1.5
                   border border-white/30 rounded-full
                   bg-white/10 hover:bg-white/20 backdrop-blur-[6px]
                   transition-all duration-200"
@@ -122,8 +122,8 @@ export default function BestOpenModels() {
                 <Image
                     src="/bestImageModel/point.png"
                     alt="vector"
-                    width={14}
-                    height={14}
+                    width={18}
+                    height={18}
                   />
                   20
                 </button>
