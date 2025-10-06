@@ -95,30 +95,30 @@ export default function HowItWorks() {
       ref={sectionRef}
       className="relative w-full min-h-screen bg-black text-white flex flex-col justify-center px-10 py-20 overflow-hidden"
     >
-      <h1 className="text-[64px] font-bold mb-16">How It Works</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold mb-12 lg:mb-16">How It Works</h1>
 
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10 ml-7">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Text */}
-        <div className="max-w-xl mb-40">
+        <div className="max-w-xl lg:max-w-2xl mb-10 lg:mb-40">
           <h3
             ref={titleRef}
-            className="text-[40px] font-bold mb-4 title"
+            className="text-3xl md:text-4xl lg:text-[40px] font-bold mb-4 title"
           >
             {steps[0].title}
           </h3>
           <p
             ref={descRef}
-            className="text-[16px] w-[532px] text-gray-300 leading-relaxed desc"
+            className="text-base lg:text-[16px] text-gray-300 leading-relaxed desc max-w-full lg:max-w-xl"
           >
             {steps[0].text}
           </p>
         </div>
 
         {/* Right Large Number */}
-        <div className="flex-shrink-0 self-start md:self-center md:mt-15">
+        <div className="flex-shrink-0 self-center lg:self-start">
           <span
             ref={numberRef}
-            className="text-[180px] font-bold text-white leading-none md:mr-20 number"
+            className="text-9xl md:text-[140px] lg:text-[180px] font-bold text-white leading-none number"
             style={{
               textShadow: `
                 1px 1px 0 #aaa,

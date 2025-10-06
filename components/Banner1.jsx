@@ -16,32 +16,44 @@ export default function HomeBanner() {
       scrollTrigger: {
         trigger: ".home-banner-wrapper",
         start: "top top",
-        end: "200% top", // controls scroll distance
-        scrub: true,
+        end: "200% top", // Extended for slower transition and to hold
+        scrub: 0.8, // Smoother and slower scroll response
         pin: true,
       },
     });
 
-    // Step 1: Zoom out and fade the banner
-    tl.to(".home-banner", {
-      scale: 0.8,
-      opacity: 0,
-      ease: "power2.out",
-      duration: 1,
-    });
+    // Step 1: Hide all background content (headline, paragraph, waitlist, email input, background image, overlay)
+    tl.to(
+      [
+        ".home-banner h1", // Headline
+        ".home-banner p", // Paragraph
+        ".home-banner .waitlist-bar", // Waitlist bar
+        ".home-banner .email-input", // Email input
+        ".home-banner .bg-overlay", // Background overlay
+        ".home-banner .banner-image", // Background image
+      ],
+      {
+        opacity: 0, // Completely hidden
+        ease: "power2.out",
+        duration: 1.5, // Slow fade to hide
+      }
+    );
 
-    // Step 2: Reveal "Transcend" after banner fades out
+    // Step 2: Fade in and scale down "Transcend" text from a much larger size (5) to its own size (1)
     tl.fromTo(
       ".transcend-text",
-      { opacity: 0, scale: 2 },
+      { opacity: 0, y: 50, scale: 5 }, // Start from much larger size (5), offset
       {
-        opacity: 1,
-        scale: 1,
-        ease: "power2.out",
-        duration: 1,
+        opacity: 1, // Fully visible
+        y: 0,
+        scale: 1, // Scale down to its "own size" (1)
+        ease: "power2.inOut", // Smooth scaling
+        duration: 3, // Longer for slow transition
       },
-      ">0.2"
+      "-=1.2" // Overlap slightly with content hide
     );
+
+    // *** STEP 3 (fade out) IS REMOVED: "Transcend" will remain visible at scale: 1 when the animation finishes. ***
 
     return () => tl.kill();
   }, []);
@@ -56,14 +68,14 @@ export default function HomeBanner() {
             alt="Background"
             fill
             priority
-            className="z-0 object-cover"
+            className="z-0 object-cover banner-image"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40 bg-overlay" />
         </div>
 
         <div className="bg-transparent relative z-10 flex flex-col items-center text-center text-white px-4">
           {/* Waitlist bar */}
-          <div className="mb-6 flex items-center gap-2 rounded-full border border-white/30 border-l-0 border-r-0 bg-white/10 px-4 py-2 backdrop-blur-xl shadow-[0_0_20px_rgba(255,255,255,0.15)] relative">
+          <div className="mb-6 flex items-center gap-2 rounded-full border border-white/30 border-l-0 border-r-0 bg-white/10 px-4 py-2 backdrop-blur-xl shadow-[0_0_20px_rgba(255,255,255,0.15)] relative waitlist-bar">
             <div className="flex -space-x-2 relative z-10 bg-transparent">
               <img
                 src="/user/User1.png"
@@ -98,7 +110,7 @@ export default function HomeBanner() {
           </p>
 
           {/* Email input */}
-          <div className="flex w-full max-w-sm px-1 py-2 items-center overflow-hidden rounded-full border border-white/40 bg-white/10 backdrop-blur-3xs">
+          <div className="flex w-full max-w-sm px-1 py-2 items-center overflow-hidden rounded-full border border-white/40 bg-white/10 backdrop-blur-3xs email-input">
             <input
               type="email"
               placeholder="Enter your Email"
@@ -121,7 +133,7 @@ export default function HomeBanner() {
       {/* SECTION 2 — TRANSCEND TEXT */}
       <section className="absolute inset-0 flex items-center justify-center bg-black z-0 pointer-events-none">
         <h1
-          className="transcend-text text-7xl md:text-[150px] font-extrabold text-transparent bg-clip-text opacity-0 scale-150"
+          className="transcend-text text-7xl md:text-[150px] font-extrabold text-transparent bg-clip-text"
           style={{
             backgroundImage: "url('/banner/hero-image.png')",
             backgroundSize: "cover",

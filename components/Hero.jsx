@@ -32,9 +32,8 @@ export default function HeroSection() {
         {/* RIGHT IMAGE SECTION */}
         <div className="flex justify-center">
           <div
-            className="relative flex flex-col items-center gap-5 overflow-hidden"
+            className="relative flex flex-col items-center gap-5 overflow-hidden w-full max-w-[325px] sm:max-w-[400px] lg:max-w-[325px]"
             style={{
-              width: "325px",
               height: "620px",
               borderRadius: "60% / 46%",
               maskImage:
@@ -51,7 +50,7 @@ export default function HeroSection() {
 
             {/* TOP SLICE */}
             <div
-              className="w-[325px] h-[115px] overflow-hidden relative"
+              className="w-full h-[115px] overflow-hidden relative"
               style={{
                 WebkitMaskImage:
                   "linear-gradient(to bottom, transparent 0%, black 100%)",
@@ -69,7 +68,7 @@ export default function HeroSection() {
             </div>
 
             {/* MIDDLE SLICE */}
-            <div className="w-[325px] h-[390px] overflow-hidden">
+            <div className="w-full h-[390px] overflow-hidden">
               <Image
                 src="/hero/slice-top.png"
                 alt="Curved Middle"
@@ -80,9 +79,9 @@ export default function HeroSection() {
             </div>
 
             {/* BOTTOM SLICE WITH STRONG 80% SHADOW */}
-            <div className="relative w-[325px] h-[115px] overflow-hidden">
+            <div className="relative w-full h-[115px] overflow-hidden">
               {/* Very dark shadow overlay (covers ~80% of height) */}
-              <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black via-black/95 via-black/90 to-transparent z-20 pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black via-black/95 to-transparent z-20 pointer-events-none"></div>
 
               <Image
                 src="/hero/slice-bottom.png"

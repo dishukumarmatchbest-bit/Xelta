@@ -36,12 +36,12 @@ export default function ImpactSection() {
     <section className="bg-black min-h-screen px-6 py-16 flex flex-col items-center">
       <div className="max-w-6xl w-full mx-auto">
         
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-10">
-          <h1 className="text-white text-[64px] font-bold leading-tight lg:max-w-[50%]">
-            Create Impact, No<br />Matter Your Goal
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-6 lg:gap-10">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight">
+            Create Impact, No<br className="hidden sm:block" />Matter Your Goal
           </h1>
-          <p className="font-[400] text-[15px] h-[63px] w-[472px] text-gray-200 lg:max-w-[45%] mt-14">
-            Xelta helps creators, brands, and businesses produce impactful videos quickly and easily whether you’re scaling content, telling stories, or growing your audience.
+          <p className="font-[400] text-sm md:text-base lg:text-[15px] text-gray-200 max-w-full lg:max-w-[472px] mt-6 lg:mt-14">
+            Xelta helps creators, brands, and businesses produce impactful videos quickly and easily whether you're scaling content, telling stories, or growing your audience.
           </p>
         </div>
 

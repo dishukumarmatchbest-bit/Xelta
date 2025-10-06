@@ -12,19 +12,19 @@ export default function Navbar2() {
           rounded-full shadow-lg border border-white/20
         "
       >
-        
+        <Link href="/">
         <div className="flex items-center space-x-2">
           <Image src="/logo/logo1.png" width={18} height={18} alt="logo" />
-          <span className="mb-2 font-extrabold text-white h-[16px]">Xelta</span>
-          
+          <span className="mb-2 font-extrabold text-white h-[16px]">Xelta</span>         
           <div className="w-px h-5 bg-white/30 ml-3" />
         </div>
+        </Link>
 
         {/* Links */}
         <div className="flex space-x-6 text-gray-200 text-sm">
           <Link href="#"><span className="hover:text-white">Model</span></Link>
-          <Link href="#"><span className="hover:text-white">Kits</span></Link>
-          <Link href="#"><span className="hover:text-white">Studio</span></Link>
+          <Link href="/usercases"><span className="hover:text-white">Usercase</span></Link>
+          <Link href="#"><span className="hover:text-white">Neuroflows</span></Link>
           <Link href="#"><span className="hover:text-white">About</span></Link>
           <Link href="#"><span className="hover:text-white">Sign Up</span></Link>
         </div>
