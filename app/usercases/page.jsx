@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BestVideoModels from "@/components/BestVideoModels";
-import BestOpenSource from "@/components/BestOpenSource";
+import BestVideoModels from "@/components/model/BestVideoModels";
+import BestOpenSource from "@/components/model/BestOpenSource";
 
 
 function Carousel() {
@@ -52,7 +52,7 @@ function Carousel() {
       id: 6,
       title: "Ultra Creator",
       description: "Produces ultra-realistic video outputs.",
-      image: "/usercase/8.png",
+      image: "/usercase/8.jpg",
       button1: "Realistic Render",
       button2: "240s",
     },
